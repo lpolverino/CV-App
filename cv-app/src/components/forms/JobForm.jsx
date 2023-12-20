@@ -1,7 +1,7 @@
 import React from 'react'
 import GeneralForm from './GeneralForm'
 
-const JobForm = ({job, updateJob}) => {
+const JobForm = ({job, updateJob, deleteHandler}) => {
 
     const jobsFormsInputs = [
         {
@@ -27,6 +27,7 @@ const JobForm = ({job, updateJob}) => {
     <div>
     <GeneralForm camps={jobsFormsInputs}>
     </GeneralForm>
+    <button onClick={() => deleteHandler(job.key)}>Delete</button>
 </div>
   )
 }

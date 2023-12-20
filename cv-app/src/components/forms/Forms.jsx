@@ -22,7 +22,7 @@ const Forms = ({
       <LaboralFormConteiner
         jobs = {laboralInfo} 
         updateJob = {updateLaboralHandler}
-        addJob={addJob}
+        addJob = {addJob}
         deleteJob = {deleteJob}>
 
       </LaboralFormConteiner>

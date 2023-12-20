@@ -1,7 +1,7 @@
 import React from 'react'
 import GeneralForm from './GeneralForm'
 
-const UniversityForm = ({university, changeHandler}) => {
+const UniversityForm = ({university, changeHandler, deleteHandler}) => {
 
     const universityFormsIputs = [
 		{
@@ -27,6 +27,7 @@ const UniversityForm = ({university, changeHandler}) => {
     <div>
         <GeneralForm camps={universityFormsIputs}>
         </GeneralForm>
+		<button onClick={() => deleteHandler(university.key)}> Delete</button>
     </div>
   )
 }

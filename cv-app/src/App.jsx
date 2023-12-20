@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { v4 as uuidv4 } from 'uuid';
 import Cv from "./components/cv/Cv"
 import Forms from "./components/forms/Forms"
 
@@ -24,14 +25,6 @@ function App() {
     setAcademic(newAcademic)
   }
 
-  const addUniversity = () =>{
-
-  }
-
-  const deleteUniversity = ()  =>{
-
-  }
-
   const updateLaboral = (index, newJob) =>{
     const filterJob = (job, id) =>{
       return job.key===id? newJob:job
@@ -40,14 +33,34 @@ function App() {
    setLaboral(newLaboral)
   }
 
-  const addLaboral = () =>{
-
+  const addArray = (newElement, array, setHandler) => {
+    const key = uuidv4();
+    newElement.key = key
+    const newArray = array.push(newElement)
+    setHandler(newArray)
   }
 
-  const deleteLaboral = ()  =>{
-
+  const addUniversity = (newUniversity) =>{
+    addArray(newUniversity, academic, setAcademic)
   }
 
+
+  const addLaboral = (newJob) =>{
+    addArray(newJob, laboral, setLaboral)
+  }
+
+  const deleteArray = (array, setHandler, id) =>{
+    const newArray = array.filter(element => element.key !== id)
+    setHandler(newArray)
+  }
+  
+  const deleteUniversity = (id)  =>{
+    deleteArray(academic, setAcademic, id)
+  }
+
+  const deleteLaboral = (id)  =>{
+    deleteArray(laboral, setLaboral, id)
+  }
 
   return (
     <>
