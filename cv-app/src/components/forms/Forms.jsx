@@ -2,13 +2,14 @@ import React from 'react'
 import PersonalForm from './PersonalForm'
 import UniversityFormConteiner from './UniversityFormConteiner'
 import LaboralFormConteiner from './LaboralFormConteiner'
+import "../../styles/forms.css"
 
 const Forms = ({
     personInfo, academicInfo, laboralInfo, updatePersonHandler,
      updateAcademicHandler, addUniversity, deleteUniversity,
         updateLaboralHandler, addJob, deleteJob}) => {
   return (
-    <div>Forms
+    <div className='forms'>
       <PersonalForm 
         person={personInfo}
         updatePersonHandler = {updatePersonHandler}

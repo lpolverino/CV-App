@@ -1,10 +1,8 @@
 import React from 'react'
 import GeneralForm from './GeneralForm'
-
-
+import "../../styles/form-section.css"
 
 const PersonalForm = ({person, updatePersonHandler}) => {
-
 
 	const personalFormsIputs = [
 		{
@@ -45,9 +43,9 @@ const PersonalForm = ({person, updatePersonHandler}) => {
 		}
 	]
 
-
   return (
-    <div>PersonalForm
+    <div className='form-section'>
+		<h2>Personal Info</h2>
 			<GeneralForm camps={personalFormsIputs}></GeneralForm>
     </div>
   )

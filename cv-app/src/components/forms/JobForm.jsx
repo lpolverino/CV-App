@@ -25,6 +25,7 @@ const JobForm = ({job, updateJob, deleteHandler}) => {
     ]
   return (
     <div>
+      <h3>{job.company}</h3>
     <GeneralForm camps={jobsFormsInputs}>
     </GeneralForm>
     <button onClick={() => deleteHandler(job.key)}>Delete</button>

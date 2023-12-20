@@ -1,9 +1,11 @@
 import React from 'react'
 import UniversityForm from './UniversityForm'
+import "../../styles/form-section.css"
 
 const UniversityFormConteiner = ({universities, updateUniversity, addUniversity, deleteUniversity}) => {
   return (
-    <div>
+    <div className='form-section'>
+        <h2>Academic Info</h2>
         <div>
             {
                 universities.map(university => 

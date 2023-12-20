@@ -1,4 +1,5 @@
 import React from 'react'
+import "../../styles/form-input.css"
 
 export const FormInput = ({label, input, onChange}) => {
   return (

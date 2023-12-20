@@ -25,6 +25,7 @@ const UniversityForm = ({university, changeHandler, deleteHandler}) => {
 	]
   return (
     <div>
+		<h3>{university.title}</h3>
         <GeneralForm camps={universityFormsIputs}>
         </GeneralForm>
 		<button onClick={() => deleteHandler(university.key)}> Delete</button>

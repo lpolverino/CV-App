@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
 import Cv from "./components/cv/Cv"
 import Forms from "./components/forms/Forms"
+import "./styles/app.css"
 
 import {personMockUp, universityMockUp, laboralMockUp} from "./mockup"
 
@@ -44,7 +45,6 @@ function App() {
     addArray(newUniversity, academic, setAcademic)
   }
 
-
   const addLaboral = (newJob) =>{
     addArray(newJob, laboral, setLaboral)
   }
@@ -63,7 +63,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <Forms
         personInfo={person}
         academicInfo = {academic}
@@ -82,7 +82,7 @@ function App() {
         academicInfo = {academic}
         laboralInfo = {laboral}>
       </Cv>
-    </>
+    </div>
   )
 }
 
