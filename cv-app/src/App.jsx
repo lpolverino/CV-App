@@ -37,11 +37,13 @@ function App() {
   const addArray = (newElement, array, setHandler) => {
     const key = uuidv4();
     newElement.key = key
-    const newArray = array.push(newElement)
+    const newArray = array.concat([newElement])
+    console.log(newArray);
     setHandler(newArray)
   }
 
   const addUniversity = (newUniversity) =>{
+    console.log("Adding new university");
     addArray(newUniversity, academic, setAcademic)
   }
 
